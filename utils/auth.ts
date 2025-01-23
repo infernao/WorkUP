@@ -35,7 +35,7 @@ export const auth = {
       email,
       password,
       options: {
-        emailRedirectTo: `${location.origin}/auth/callback`,
+        emailRedirectTo: `https://work-up-sandy.vercel.app/auth/callback`,
       },
     });
 
@@ -84,7 +84,7 @@ export const auth = {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
-        redirectTo: `${location.origin}/auth/callback?next=${nextUrl || '/'}`,
+        redirectTo: `https://work-up-sandy.vercel.app/auth/callback?next=${nextUrl || '/'}`,
       },
     });
     if (error) throw error;
